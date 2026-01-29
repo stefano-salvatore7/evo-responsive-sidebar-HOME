@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       2.1
+// @version       2.2
 // @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone con font enormi (2x desktop)
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
@@ -170,6 +170,7 @@
                     width: auto !important;
                     min-width: 200px !important;
                     height: auto !important;
+                    border-radius: 8px !important;
                 }
 
                 .calc-mode-switch-home {
@@ -178,6 +179,7 @@
                     width: auto !important;
                     min-width: 200px !important;
                     height: auto !important;
+                    border-radius: 10px !important;
                 }
 
                 .calc-mode-switch-segment-home {
@@ -186,12 +188,17 @@
                     line-height: 1.4 !important;
                 }
 
+                .calc-mode-slider-home {
+                    border-radius: 8px !important;
+                }
+
                 #compactExitTimeBoxHome {
                     font-size: 2rem !important;
                     padding: 1rem 1.5rem !important;
                     width: auto !important;
                     min-width: 180px !important;
                     height: auto !important;
+                    border-radius: 8px !important;
                 }
 
                 #compactExitTimeBoxHome .exit-label {
@@ -316,10 +323,12 @@
                 #fasciaOrariaSelectorHome {
                     font-size: 1.8rem !important;
                     padding: 0.9rem !important;
+                    border-radius: 8px !important;
                 }
 
                 .calc-mode-switch-home {
                     font-size: 1.8rem !important;
+                    border-radius: 10px !important;
                 }
 
                 .calc-mode-switch-segment-home {
@@ -327,9 +336,14 @@
                     padding: 0.7rem 1rem !important;
                 }
 
+                .calc-mode-slider-home {
+                    border-radius: 8px !important;
+                }
+
                 #compactExitTimeBoxHome {
                     font-size: 1.8rem !important;
                     padding: 0.9rem 1.3rem !important;
+                    border-radius: 8px !important;
                 }
 
                 #compactExitTimeBoxHome .exit-label {
