@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       1.3
-// @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone
+// @version       2.0
+// @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone con font enormi (2x desktop)
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
 // @icon          https://www.unibo.it/favicon.ico
@@ -22,8 +22,9 @@
         style.innerHTML = `
             /* Media query per dispositivi mobile - usando max-width in combinazione con orientamento */
             /* Copre smartphone in portrait anche con alta risoluzione */
+            /* ESCLUDE esplicitamente schermi desktop grandi */
             @media (max-width: 1024px) and (orientation: portrait),
-                   (max-width: 768px) {
+                   (max-width: 768px) and (orientation: landscape) {
                 /* Modifica il layout della griglia principale */
                 .parent {
                     grid-template-columns: repeat(1, 1fr) !important;
@@ -57,142 +58,186 @@
                 }
 
                 .progress-circle {
-                    margin-bottom: 1rem;
+                    margin-bottom: 1.5rem;
                 }
 
-                /* FONT MOLTO PIÙ GRANDI PER MOBILE */
+                /* FONT ENORMI PER MOBILE - IL DOPPIO DELLA VERSIONE PRECEDENTE */
                 /* Titoli principali */
                 h2 {
-                    font-size: 2.2rem !important;
+                    font-size: 3.5rem !important;
+                    line-height: 1.3 !important;
                 }
 
                 h4 {
-                    font-size: 1.7rem !important;
+                    font-size: 2.8rem !important;
+                    line-height: 1.4 !important;
+                    margin-bottom: 1rem !important;
                 }
 
                 /* Testo generale delle card */
                 .card {
-                    font-size: 1.3rem !important;
+                    font-size: 2.2rem !important;
+                    line-height: 1.6 !important;
                 }
 
-                /* Tabella timbrature con font più grande */
+                /* Tabella timbrature con font enormi */
                 .clockings-table {
-                    font-size: 1.25rem !important;
+                    font-size: 2rem !important;
+                    line-height: 1.5 !important;
                 }
 
                 .clockings-table th,
                 .clockings-table td {
-                    padding: 0.75rem !important;
+                    padding: 1.2rem !important;
                 }
 
-                /* Badge più grandi e leggibili */
+                /* Badge enormi e leggibili */
                 .badge {
-                    font-size: 1.15rem !important;
-                    padding: 0.5rem 0.9rem !important;
-                }
-
-                /* Liste più grandi */
-                .utils ul li {
-                    font-size: 1.25rem !important;
-                    line-height: 1.7 !important;
-                    margin-bottom: 0.6rem !important;
-                }
-
-                /* Testo informativo più grande */
-                .d-flex.align-items-center.pb-2 {
-                    font-size: 1.3rem !important;
-                }
-
-                /* Progress circle con testo più grande */
-                .progress-circle {
-                    font-size: 1.9rem !important;
-                    --size: 140px !important;
-                }
-
-                /* Icone Material più grandi */
-                .material-symbols-outlined {
                     font-size: 1.8rem !important;
+                    padding: 0.8rem 1.4rem !important;
+                }
+
+                /* Liste enormi */
+                .utils ul li {
+                    font-size: 2rem !important;
+                    line-height: 1.8 !important;
+                    margin-bottom: 0.8rem !important;
+                }
+
+                /* Testo informativo enorme */
+                .d-flex.align-items-center.pb-2 {
+                    font-size: 2.2rem !important;
+                    line-height: 1.6 !important;
+                }
+
+                /* Progress circle con testo enorme */
+                .progress-circle {
+                    font-size: 3rem !important;
+                    --size: 200px !important;
+                }
+
+                /* Icone Material enormi */
+                .material-symbols-outlined {
+                    font-size: 3rem !important;
                 }
 
                 /* Padding maggiore nelle card per mobile */
                 .card.p-3 {
-                    padding: 1.5rem !important;
+                    padding: 2rem !important;
                 }
 
-                /* Bottoni più grandi */
+                .welcome {
+                    padding: 2rem !important;
+                }
+
+                /* Bottoni enormi */
                 .bottone {
-                    font-size: 1.2rem !important;
-                    padding: 0.75rem 1.25rem !important;
+                    font-size: 2rem !important;
+                    padding: 1.2rem 2rem !important;
                 }
 
-                /* Link più grandi */
+                /* Link enormi */
                 a {
-                    font-size: 1.25rem !important;
+                    font-size: 2rem !important;
                 }
 
-                /* Testo generale del body più grande */
+                /* Testo generale del body enorme */
                 body, .form-mw {
-                    font-size: 1.2rem !important;
+                    font-size: 2rem !important;
+                    line-height: 1.6 !important;
+                }
+
+                /* Testo in grassetto */
+                b, strong {
+                    font-size: inherit !important;
                 }
             }
 
-            /* Media query per dispositivi in landscape con larghezza ridotta */
-            @media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+            /* Media query per dispositivi in landscape con larghezza ridotta (SOLO MOBILE) */
+            @media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) and (hover: none) {
                 .parent {
                     gap: 0.75rem !important;
+                }
+                
+                /* Font ridotti per landscape mobile */
+                body, .form-mw {
+                    font-size: 1.4rem !important;
+                }
+                
+                h2 {
+                    font-size: 2.2rem !important;
+                }
+                
+                h4 {
+                    font-size: 1.8rem !important;
                 }
             }
 
             /* Media query per dispositivi molto piccoli */
-            @media (max-width: 480px), 
-                   (max-width: 640px) and (orientation: portrait) {
+            @media (max-width: 480px) and (orientation: portrait), 
+                   (max-width: 640px) and (orientation: portrait) and (max-height: 800px) {
                 .parent {
-                    gap: 0.75rem !important;
+                    gap: 1rem !important;
                 }
 
-                /* Font grandi anche su schermi piccoli */
+                /* Font enormi anche su schermi piccoli */
                 h2 {
-                    font-size: 1.9rem !important;
+                    font-size: 3rem !important;
+                    line-height: 1.3 !important;
                 }
 
                 h4 {
-                    font-size: 1.5rem !important;
+                    font-size: 2.4rem !important;
+                    line-height: 1.4 !important;
                 }
 
                 .card {
-                    font-size: 1.2rem !important;
+                    font-size: 2rem !important;
+                    line-height: 1.6 !important;
                 }
 
                 .clockings-table {
-                    font-size: 1.15rem !important;
+                    font-size: 1.8rem !important;
+                    line-height: 1.5 !important;
                 }
 
                 .clockings-table th,
                 .clockings-table td {
-                    padding: 0.65rem !important;
+                    padding: 1rem !important;
                 }
 
                 .badge {
-                    font-size: 1.05rem !important;
-                    padding: 0.45rem 0.75rem !important;
+                    font-size: 1.6rem !important;
+                    padding: 0.7rem 1.2rem !important;
                 }
 
                 /* Progress circle proporzionato */
                 .progress-circle {
-                    --size: 130px !important;
-                    font-size: 1.7rem !important;
+                    --size: 180px !important;
+                    font-size: 2.6rem !important;
                 }
 
                 .utils ul li {
-                    font-size: 1.15rem !important;
+                    font-size: 1.9rem !important;
+                    line-height: 1.7 !important;
                 }
 
                 .material-symbols-outlined {
-                    font-size: 1.6rem !important;
+                    font-size: 2.6rem !important;
                 }
 
                 body, .form-mw {
-                    font-size: 1.15rem !important;
+                    font-size: 1.9rem !important;
+                    line-height: 1.6 !important;
+                }
+
+                .bottone {
+                    font-size: 1.8rem !important;
+                    padding: 1rem 1.6rem !important;
+                }
+
+                a {
+                    font-size: 1.9rem !important;
                 }
             }
 
