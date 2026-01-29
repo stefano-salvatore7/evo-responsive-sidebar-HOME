@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       1.1
+// @version       1.2
 // @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
@@ -60,20 +60,68 @@
                     margin-bottom: 1rem;
                 }
 
-                /* Tabella timbrature più compatta su mobile */
+                /* FONT PIÙ GRANDI PER MOBILE */
+                /* Titoli principali */
+                h2 {
+                    font-size: 1.75rem !important;
+                }
+
+                h4 {
+                    font-size: 1.35rem !important;
+                }
+
+                /* Testo generale delle card */
+                .card {
+                    font-size: 1.1rem !important;
+                }
+
+                /* Tabella timbrature con font più grande */
                 .clockings-table {
-                    font-size: 0.875rem !important;
+                    font-size: 1rem !important;
                 }
 
                 .clockings-table th,
                 .clockings-table td {
-                    padding: 0.4rem !important;
+                    padding: 0.6rem !important;
                 }
 
-                /* Badge più piccoli su mobile */
+                /* Badge più grandi e leggibili */
                 .badge {
-                    font-size: 0.75rem !important;
-                    padding: 0.25rem 0.5rem !important;
+                    font-size: 0.95rem !important;
+                    padding: 0.4rem 0.7rem !important;
+                }
+
+                /* Liste più grandi */
+                .utils ul li {
+                    font-size: 1.05rem !important;
+                    line-height: 1.6 !important;
+                    margin-bottom: 0.5rem !important;
+                }
+
+                /* Testo informativo più grande */
+                .d-flex.align-items-center.pb-2 {
+                    font-size: 1.1rem !important;
+                }
+
+                /* Progress circle con testo più grande */
+                .progress-circle {
+                    font-size: 1.6rem !important;
+                }
+
+                /* Icone Material più grandi */
+                .material-symbols-outlined {
+                    font-size: 1.5rem !important;
+                }
+
+                /* Padding maggiore nelle card per mobile */
+                .card.p-3 {
+                    padding: 1.25rem !important;
+                }
+
+                /* Bottoni più grandi */
+                .bottone {
+                    font-size: 1rem !important;
+                    padding: 0.6rem 1rem !important;
                 }
             }
 
@@ -91,23 +139,41 @@
                     gap: 0.75rem !important;
                 }
 
+                /* Font leggermente più piccoli ma comunque leggibili */
+                h2 {
+                    font-size: 1.5rem !important;
+                }
+
+                h4 {
+                    font-size: 1.2rem !important;
+                }
+
+                .card {
+                    font-size: 1rem !important;
+                }
+
                 .clockings-table {
-                    font-size: 0.75rem !important;
+                    font-size: 0.95rem !important;
                 }
 
                 .clockings-table th,
                 .clockings-table td {
-                    padding: 0.3rem !important;
+                    padding: 0.5rem !important;
                 }
 
-                /* Progress circle più piccolo su schermi molto piccoli */
+                .badge {
+                    font-size: 0.85rem !important;
+                    padding: 0.35rem 0.6rem !important;
+                }
+
+                /* Progress circle proporzionato */
                 .progress-circle {
-                    --size: 100px !important;
-                    font-size: 1.2rem !important;
+                    --size: 110px !important;
+                    font-size: 1.4rem !important;
                 }
 
-                h4 {
-                    font-size: 1.25rem !important;
+                .utils ul li {
+                    font-size: 0.95rem !important;
                 }
             }
 
