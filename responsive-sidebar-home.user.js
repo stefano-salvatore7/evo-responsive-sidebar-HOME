@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       1.0
+// @version       1.1
 // @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
@@ -20,8 +20,10 @@
         const style = document.createElement('style');
         style.type = 'text/css';
         style.innerHTML = `
-            /* Media query per dispositivi mobile (max-width: 768px) */
-            @media (max-width: 768px) {
+            /* Media query per dispositivi mobile - usando max-width in combinazione con orientamento */
+            /* Copre smartphone in portrait anche con alta risoluzione */
+            @media (max-width: 1024px) and (orientation: portrait),
+                   (max-width: 768px) {
                 /* Modifica il layout della griglia principale */
                 .parent {
                     grid-template-columns: repeat(1, 1fr) !important;
@@ -75,8 +77,16 @@
                 }
             }
 
-            /* Media query per dispositivi molto piccoli (max-width: 480px) */
-            @media (max-width: 480px) {
+            /* Media query per dispositivi in landscape con larghezza ridotta */
+            @media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+                .parent {
+                    gap: 0.75rem !important;
+                }
+            }
+
+            /* Media query per dispositivi molto piccoli */
+            @media (max-width: 480px), 
+                   (max-width: 640px) and (orientation: portrait) {
                 .parent {
                     gap: 0.75rem !important;
                 }
@@ -98,6 +108,29 @@
 
                 h4 {
                     font-size: 1.25rem !important;
+                }
+            }
+
+            /* Aggiunge supporto per touch screen indipendentemente dalla risoluzione */
+            @media (hover: none) and (pointer: coarse) {
+                .parent {
+                    grid-template-columns: repeat(1, 1fr) !important;
+                }
+
+                .welcome {
+                    grid-column: span 1 / span 1 !important;
+                }
+
+                .body-container {
+                    grid-column: span 1 / span 1 !important;
+                    grid-template-columns: repeat(1, 1fr) !important;
+                }
+
+                .utils {
+                    grid-column: span 1 / span 1 !important;
+                    grid-row: auto !important;
+                    grid-column-start: auto !important;
+                    grid-row-start: auto !important;
                 }
             }
         `;
