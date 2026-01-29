@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       2.2
+// @version       2.3
 // @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone con font enormi (2x desktop)
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
@@ -64,7 +64,7 @@
                 /* FONT ENORMI PER MOBILE - IL DOPPIO DELLA VERSIONE PRECEDENTE */
                 /* Titoli principali */
                 h2 {
-                    font-size: 3.5rem !important;
+                    font-size: 1.75rem !important;
                     line-height: 1.3 !important;
                 }
 
@@ -236,7 +236,7 @@
                 }
                 
                 h2 {
-                    font-size: 2.2rem !important;
+                    font-size: 1.5rem !important;
                 }
                 
                 h4 {
@@ -253,7 +253,7 @@
 
                 /* Font enormi anche su schermi piccoli */
                 h2 {
-                    font-size: 3rem !important;
+                    font-size: 1.5rem !important;
                     line-height: 1.3 !important;
                 }
 
