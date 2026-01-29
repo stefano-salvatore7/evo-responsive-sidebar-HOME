@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       2.0
+// @version       2.1
 // @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone con font enormi (2x desktop)
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
@@ -151,6 +151,70 @@
                 b, strong {
                     font-size: inherit !important;
                 }
+
+                /* STILI PER IL CALCULATOR "ORA DEL GIORNO" */
+                #evoCalculatorContainerHome h4 {
+                    font-size: 2.8rem !important;
+                    line-height: 1.4 !important;
+                    margin-bottom: 1rem !important;
+                }
+
+                .evo-label-home {
+                    font-size: 1.8rem !important;
+                    margin-bottom: 0.8rem !important;
+                }
+
+                #fasciaOrariaSelectorHome {
+                    font-size: 2rem !important;
+                    padding: 1rem !important;
+                    width: auto !important;
+                    min-width: 200px !important;
+                    height: auto !important;
+                }
+
+                .calc-mode-switch-home {
+                    font-size: 2rem !important;
+                    padding: 0.5rem !important;
+                    width: auto !important;
+                    min-width: 200px !important;
+                    height: auto !important;
+                }
+
+                .calc-mode-switch-segment-home {
+                    font-size: 2rem !important;
+                    padding: 0.8rem 1.2rem !important;
+                    line-height: 1.4 !important;
+                }
+
+                #compactExitTimeBoxHome {
+                    font-size: 2rem !important;
+                    padding: 1rem 1.5rem !important;
+                    width: auto !important;
+                    min-width: 180px !important;
+                    height: auto !important;
+                }
+
+                #compactExitTimeBoxHome .exit-label {
+                    font-size: 2rem !important;
+                }
+
+                #compactExitTimeBoxHome .value {
+                    font-size: 2.4rem !important;
+                    font-weight: bold !important;
+                }
+
+                .evo-content-wrapper-home {
+                    gap: 2rem !important;
+                }
+
+                .evo-group-wrapper-home {
+                    gap: 1rem !important;
+                }
+
+                #evoCalculatorContainerHome {
+                    padding: 2rem !important;
+                    margin-bottom: 2rem !important;
+                }
             }
 
             /* Media query per dispositivi in landscape con larghezza ridotta (SOLO MOBILE) */
@@ -238,6 +302,42 @@
 
                 a {
                     font-size: 1.9rem !important;
+                }
+
+                /* STILI PER IL CALCULATOR "ORA DEL GIORNO" SU SCHERMI PICCOLI */
+                #evoCalculatorContainerHome h4 {
+                    font-size: 2.4rem !important;
+                }
+
+                .evo-label-home {
+                    font-size: 1.6rem !important;
+                }
+
+                #fasciaOrariaSelectorHome {
+                    font-size: 1.8rem !important;
+                    padding: 0.9rem !important;
+                }
+
+                .calc-mode-switch-home {
+                    font-size: 1.8rem !important;
+                }
+
+                .calc-mode-switch-segment-home {
+                    font-size: 1.8rem !important;
+                    padding: 0.7rem 1rem !important;
+                }
+
+                #compactExitTimeBoxHome {
+                    font-size: 1.8rem !important;
+                    padding: 0.9rem 1.3rem !important;
+                }
+
+                #compactExitTimeBoxHome .exit-label {
+                    font-size: 1.8rem !important;
+                }
+
+                #compactExitTimeBoxHome .value {
+                    font-size: 2.2rem !important;
                 }
             }
 
