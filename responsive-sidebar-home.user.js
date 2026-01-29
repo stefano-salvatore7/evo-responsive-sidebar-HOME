@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          EVO - Layout Responsive Sidebar
 // @namespace     https://unibo.it/
-// @version       1.2
+// @version       1.3
 // @description   Rende responsive le card "Saldo Ferie" e "Richieste pendenti" su smartphone
 // @author        Stefano
 // @match         https://personale-unibo.hrgpi.it/*
@@ -60,68 +60,79 @@
                     margin-bottom: 1rem;
                 }
 
-                /* FONT PIÙ GRANDI PER MOBILE */
+                /* FONT MOLTO PIÙ GRANDI PER MOBILE */
                 /* Titoli principali */
                 h2 {
-                    font-size: 1.75rem !important;
+                    font-size: 2.2rem !important;
                 }
 
                 h4 {
-                    font-size: 1.35rem !important;
+                    font-size: 1.7rem !important;
                 }
 
                 /* Testo generale delle card */
                 .card {
-                    font-size: 1.1rem !important;
+                    font-size: 1.3rem !important;
                 }
 
                 /* Tabella timbrature con font più grande */
                 .clockings-table {
-                    font-size: 1rem !important;
+                    font-size: 1.25rem !important;
                 }
 
                 .clockings-table th,
                 .clockings-table td {
-                    padding: 0.6rem !important;
+                    padding: 0.75rem !important;
                 }
 
                 /* Badge più grandi e leggibili */
                 .badge {
-                    font-size: 0.95rem !important;
-                    padding: 0.4rem 0.7rem !important;
+                    font-size: 1.15rem !important;
+                    padding: 0.5rem 0.9rem !important;
                 }
 
                 /* Liste più grandi */
                 .utils ul li {
-                    font-size: 1.05rem !important;
-                    line-height: 1.6 !important;
-                    margin-bottom: 0.5rem !important;
+                    font-size: 1.25rem !important;
+                    line-height: 1.7 !important;
+                    margin-bottom: 0.6rem !important;
                 }
 
                 /* Testo informativo più grande */
                 .d-flex.align-items-center.pb-2 {
-                    font-size: 1.1rem !important;
+                    font-size: 1.3rem !important;
                 }
 
                 /* Progress circle con testo più grande */
                 .progress-circle {
-                    font-size: 1.6rem !important;
+                    font-size: 1.9rem !important;
+                    --size: 140px !important;
                 }
 
                 /* Icone Material più grandi */
                 .material-symbols-outlined {
-                    font-size: 1.5rem !important;
+                    font-size: 1.8rem !important;
                 }
 
                 /* Padding maggiore nelle card per mobile */
                 .card.p-3 {
-                    padding: 1.25rem !important;
+                    padding: 1.5rem !important;
                 }
 
                 /* Bottoni più grandi */
                 .bottone {
-                    font-size: 1rem !important;
-                    padding: 0.6rem 1rem !important;
+                    font-size: 1.2rem !important;
+                    padding: 0.75rem 1.25rem !important;
+                }
+
+                /* Link più grandi */
+                a {
+                    font-size: 1.25rem !important;
+                }
+
+                /* Testo generale del body più grande */
+                body, .form-mw {
+                    font-size: 1.2rem !important;
                 }
             }
 
@@ -139,41 +150,49 @@
                     gap: 0.75rem !important;
                 }
 
-                /* Font leggermente più piccoli ma comunque leggibili */
+                /* Font grandi anche su schermi piccoli */
                 h2 {
-                    font-size: 1.5rem !important;
+                    font-size: 1.9rem !important;
                 }
 
                 h4 {
-                    font-size: 1.2rem !important;
+                    font-size: 1.5rem !important;
                 }
 
                 .card {
-                    font-size: 1rem !important;
+                    font-size: 1.2rem !important;
                 }
 
                 .clockings-table {
-                    font-size: 0.95rem !important;
+                    font-size: 1.15rem !important;
                 }
 
                 .clockings-table th,
                 .clockings-table td {
-                    padding: 0.5rem !important;
+                    padding: 0.65rem !important;
                 }
 
                 .badge {
-                    font-size: 0.85rem !important;
-                    padding: 0.35rem 0.6rem !important;
+                    font-size: 1.05rem !important;
+                    padding: 0.45rem 0.75rem !important;
                 }
 
                 /* Progress circle proporzionato */
                 .progress-circle {
-                    --size: 110px !important;
-                    font-size: 1.4rem !important;
+                    --size: 130px !important;
+                    font-size: 1.7rem !important;
                 }
 
                 .utils ul li {
-                    font-size: 0.95rem !important;
+                    font-size: 1.15rem !important;
+                }
+
+                .material-symbols-outlined {
+                    font-size: 1.6rem !important;
+                }
+
+                body, .form-mw {
+                    font-size: 1.15rem !important;
                 }
             }
 
